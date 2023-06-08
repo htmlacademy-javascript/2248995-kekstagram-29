@@ -1,9 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Сергей Асаул](https://up.htmlacademy.ru/javascript/29/user/2248995).
-* Наставник: `Неизвестно`.
-
----
+* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742)
 
 _Не удаляйте и не изменяйте самовольно файлы и папки:_
 _`.editorconfig`, `.eslintrc`, `.gitattributes`, `.gitignore`, `package-lock.json`, `package.json`., `.github`_
