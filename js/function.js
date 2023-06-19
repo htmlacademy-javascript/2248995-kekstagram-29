@@ -1,6 +1,6 @@
-// const isStringLength = (string, maxString) =>
-// 	string.length <= maxString;
-// isStringLength('Норильск', 20);
+const isStringLength = (string, maxString) =>
+  string.length <= maxString;
+isStringLength('Норильск', 20);
 
 const isPolindrom = (string) => {
   const normalString = string
@@ -16,3 +16,4 @@ const isPolindrom = (string) => {
 isPolindrom('топот');
 isPolindrom('ДовОд');
 isPolindrom('Кекс');
+
