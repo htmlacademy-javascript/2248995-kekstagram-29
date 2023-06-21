@@ -49,9 +49,10 @@ const getRandomInteger = (a, b) => {
 };
 
 // Генерация случайного элемента
-const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
+const getRandomArrayElement = (elements) =>
+  elements[getRandomInteger(0, elements.length - 1)];
 
-const CREATE_COMMENT = () => ({
+const createComment = () => ({
   idComment: getRandomInteger(1, 1000),
   avatar: `img/avatar-${getRandomInteger(1, 6)}.svg`,
   message: getRandomArrayElement(MESSAGE),
@@ -59,14 +60,14 @@ const CREATE_COMMENT = () => ({
 });
 
 // Объект состоит из 5 ключей:
-const CREATE_PHOTO = () => ({
+const createPhoto = () => ({
   id: getRandomInteger(1, 25),
   url: `photos/${getRandomInteger(1, 25)}.jpg`,
   description: getRandomArrayElement(DESCRIPTION),
   likes: getRandomInteger(15, 200),
-  comments: Array.from({ length: getRandomInteger(0, 30) }, CREATE_COMMENT)
+  comments: Array.from({ length: getRandomInteger(0, 30) }, createComment)
 });
 
-const SIMILARPOSTS = Array.from({ length: POST_COUNT }, CREATE_PHOTO);
+const SIMILARPOSTS = Array.from({ length: POST_COUNT }, createPhoto);
 
 console.log(SIMILARPOSTS);
