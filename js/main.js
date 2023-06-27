@@ -1,3 +1,3 @@
-import { similarPosts } from './data.js';
+import { getPosts } from './data.js';
 
-console.log(similarPosts());
+console.log(getPosts());

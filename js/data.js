@@ -35,8 +35,11 @@ const NAMES = [
   'Слава',
 ];
 
+const generateIdComment = createRandomIdGenerator(1, 10000);
+const generateUrlPhoto = createRandomIdGenerator(1, 25);
+
 const createComment = () => ({
-  idComment: getRandomInteger(1, 1000),
+  id: generateIdComment(1, 1000),
   avatar: `img/avatar-${getRandomInteger(1, 6)}.svg`,
   message: getRandomArrayElement(MESSAGE),
   name: getRandomArrayElement(NAMES),
@@ -45,14 +48,14 @@ const createComment = () => ({
 // Объект состоит из 5 ключей:
 const createPhoto = () => ({
   id: getRandomInteger(1, 25),
-  url: `photos/${getRandomInteger(1, 25)}.jpg`,
+  url: `photos/${generateUrlPhoto(1, 25)}.jpg`,
   description: getRandomArrayElement(DESCRIPTION),
   likes: getRandomInteger(15, 200),
   comments: Array.from({ length: getRandomInteger(0, 30) }, createComment)
 });
 
-const similarPosts = () => Array.from({ length: POST_COUNT }, createPhoto);
+const getPosts = () => Array.from({ length: POST_COUNT }, createPhoto);
 
-export { similarPosts };
+export { getPosts };
 
 
