@@ -54,8 +54,8 @@ const createPhoto = () => ({
   comments: Array.from({ length: getRandomInteger(0, 30) }, createComment)
 });
 
-const getPosts = () => Array.from({ length: POST_COUNT }, createPhoto);
+const createPosts = () => Array.from({ length: POST_COUNT }, createPhoto);
 
-export { getPosts };
+export { createPosts };
 
 
