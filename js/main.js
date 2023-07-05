@@ -1,2 +1,3 @@
-import { getPosts } from './data.js';
-
+import { createPosts } from './data.js';
+import './post.js';
+createPosts();
