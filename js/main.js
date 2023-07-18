@@ -1,3 +1,4 @@
-import { createPosts } from './data.js';
-import './post.js';
-createPosts();
+import { renderThumbnail } from './gallery.js';
+import { postsData } from './data.js';
+import './modal.js';
+renderThumbnail(postsData);
