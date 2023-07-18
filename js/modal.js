@@ -22,18 +22,22 @@ const openPictureModal = () => {
 
   document.body.classList.add('modal-open');
 };
+
 function onDocumentKey(evt) {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
     closePictureModal();
   }
 }
+
 posts.addEventListener('click', (evt) => {
   const target = evt.target.closest('.picture');
   let postId;
+
   if (target !== null) {
     postId = Number(target.dataset.id);
     const postData = postsData.find((post) => post.id === postId);
+
     createPictureModal(postData);
   }
 });

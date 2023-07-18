@@ -10,6 +10,7 @@ const getRandomArrayElement = (elements) => elements[getRandomInteger(0, element
 
 function createRandomIdFromRangeGenerator(min, max) {
   const previousValues = [];
+
   return function () {
     let currentValue = getRandomInteger(min, max);
     if (previousValues.length >= (max - min + 1)) {
@@ -35,5 +36,6 @@ const createElemet = (tagName, className, text) => {
 
   return element;
 };
+
 
 export { createRandomIdFromRangeGenerator, getRandomArrayElement, getRandomInteger, isEscapeKey, createElemet };

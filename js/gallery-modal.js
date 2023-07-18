@@ -7,15 +7,19 @@ const commentsList = document.querySelector('.social__comments');
 const COMMENTS_TO_SHOW = 5;
 let currentComments = [];
 
+
 const createComment = (avatar, message, name) => {
   const listItem = createElemet('li', 'social__comment');
   const image = createElemet('img', 'social__picture');
   const text = createElemet('p', 'social__text', message);
+
   const imageSize = 35;
+
   image.src = avatar;
   image.alt = name;
   image.style.width = `${imageSize}px`;
   image.style.heigth = `${imageSize}px`;
+
   listItem.append(image, text);
   return listItem;
 };
@@ -48,6 +52,7 @@ const loadMore = () => {
   const moreComments = currentComments.slice(commentsList.children.length, commentsList.children.length + COMMENTS_TO_SHOW);
   const renderMoreComments = renderComments(moreComments);
   commentsList.append(renderMoreComments);
+
   if (currentComments.length === commentsList.children.length) {
     moreButton.classList.add('hidden');
   }
